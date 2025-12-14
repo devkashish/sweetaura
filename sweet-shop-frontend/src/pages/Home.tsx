@@ -52,7 +52,7 @@ const Home = () => {
               >
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-800 leading-tight">
                   Welcome to{" "}
-                  <span className="text-rose-500">Sweetaura</span>
+                  <span className="text-rose-500">SweetAura</span>
                 </h1>
 
                 <motion.h2

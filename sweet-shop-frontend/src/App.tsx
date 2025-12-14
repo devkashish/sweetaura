@@ -13,37 +13,44 @@ import AdminRoute from "./routes/AdminRoutes";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* 🔥 App Layout */}
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
 
-      {/* ✅ Toast just below navbar */}
-      <Toaster
-        position="top-right"
-        toastOptions={{
-          duration: 3000,
-          style: {
-            marginTop: "7rem", // navbar height
-            borderRadius: "12px",
-          },
-        }}
-      />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/sweets" element={<Sweets />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-
-        <Route
-          path="/admin"
-          element={
-            <AdminRoute>
-              <AdminDashboard />
-            </AdminRoute>
-          }
+        {/* ✅ Toast below navbar */}
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            duration: 3000,
+            style: {
+              marginTop: "6rem", // navbar height
+              borderRadius: "12px",
+            },
+          }}
         />
-      </Routes>
 
-      <Footer />
+        {/* ✅ MAIN CONTENT (pushes footer down) */}
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sweets" element={<Sweets />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+
+            <Route
+              path="/admin"
+              element={
+                <AdminRoute>
+                  <AdminDashboard />
+                </AdminRoute>
+              }
+            />
+          </Routes>
+        </main>
+
+        {/* ✅ Footer always at bottom */}
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }

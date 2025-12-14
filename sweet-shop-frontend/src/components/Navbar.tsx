@@ -36,8 +36,8 @@ const Navbar = () => {
 
         {/* Brand */}
         <Link to="/" className="flex items-center gap-3 text-2xl font-heading font-semibold">
-          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <img src={logo} alt="Sweetaura" className="w-6 h-6 object-contain" />
+          <div className="w-10 h-10   flex items-center justify-center">
+            <img src={logo} alt="Sweetaura" className="w-100 h-100 object-contain" />
           </div>
           SweetAura
         </Link>
