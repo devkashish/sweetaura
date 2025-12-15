@@ -5,7 +5,7 @@ yarn-error.log
 
 # Vite
 .vite/
-
+dist/
 # Env
 .env
 
